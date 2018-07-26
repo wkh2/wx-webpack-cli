@@ -1,0 +1,12 @@
+<template name="card">
+    <view class="card-cell">
+        <image src="{{imageUrlFilter}}" />
+        <view class="card-cell__detail">
+            <view class="card-cell__title">{{skuTitle}}</view>
+            <view class="card-cell__price">
+                商品价格:
+                <text>￥{{priceFilter}}</text>
+            </view>
+        </view>
+    </view>
+</template>

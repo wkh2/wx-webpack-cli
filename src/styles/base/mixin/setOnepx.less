@@ -1,0 +1,54 @@
+@import '../variable/color.less';
+.line(@c:@border-color) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    content: '';
+    transform: scale(.5);
+    transform-origin: 0 0;
+    pointer-events: none;
+    border: 0 solid @c;
+}
+
+.setLine(@p:after, @c: @border-color){
+    position: relative;
+    &:@{p} {
+        .line(@c);
+        border-width: 1px;
+    }
+}
+
+.setTopLine(@p:after, @c: @border-color) {
+    position: relative;
+    &:@{p} {
+        .line(@c);
+        border-top-width: 1px;
+    }
+}
+
+.setBottomLine(@p:after, @c: @border-color) {
+    position: relative;
+    &:@{p} {
+        .line(@c);
+        border-bottom-width: 1px;
+    }
+}
+
+.setLeftLine(@p:after, @c: @border-color) {
+    position: relative;
+    &:@{p} {
+        .line(@c);
+        border-left-width: 1px;
+    }
+}
+
+.setRightLine(@p:after, @c: @border-color) {
+    position: relative;
+    &:@{p} {
+        .line(@c);
+        border-right-width: 1px;
+    }
+}

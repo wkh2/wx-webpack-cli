@@ -1,0 +1,16 @@
+<view class="scroll__message">
+  <swiper indicator-dots="{{indicatorDots}}"
+          autoplay="{{autoplay}}"
+          interval="{{interval}}"
+          duration="{{duration}}"
+          circular="{{circular}}"
+          vertical="{{vertical}}"
+          class="swiper__com"
+  >
+    <block wx:for="{{messages}}">
+      <swiper-item class="swiper__item">
+          {{item}}
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

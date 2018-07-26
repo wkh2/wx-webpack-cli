@@ -1,0 +1,67 @@
+@import "../../styles/base/variable/color";
+@import "../../styles/base/variable/font";
+@import "../../styles/base/mixin/setOnepx";
+.model__mask {
+  background: rgba(0, 0, 0, .7);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.model__main {
+  z-index: 101;
+  width: 630rpx;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 10rpx;
+  padding-top: 50rpx;
+  box-sizing: border-box;
+}
+
+.model__main-title {
+  font-size: @font-size32;
+  color: #333333;
+  text-align: center;
+  margin-bottom: 20rpx;
+  font-weight: bold;
+}
+
+.model__main-content {
+  font-size: @font-size28;
+  color: #333333;
+  text-align: center;
+  line-height: 40rpx;
+  margin-bottom: 54rpx;
+  padding: 0 30rpx;
+}
+
+.model__main-btns {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  height: 88rpx;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 88rpx;
+  .setTopLine(before);
+}
+
+.model__main-cancel {
+  color: #333333;
+  flex: 1;
+}
+
+.model__main-ok {
+  color: #F0250F;
+  flex: 1;
+  .setLeftLine(after);
+}
+

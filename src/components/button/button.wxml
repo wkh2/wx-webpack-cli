@@ -1,0 +1,5 @@
+<view class="button {{size}} {{color}} {{shape}} external-btn-class" bindtap="onTap">
+  <slot></slot>
+  <text>{{innerText}}
+  </text>
+</view>

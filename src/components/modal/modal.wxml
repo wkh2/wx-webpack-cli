@@ -1,0 +1,11 @@
+<view class="model external-model-class" wx:if="{{isShow}}">
+    <view class="model__mask"></view>
+    <view class="model__main">
+        <view class="model__main-title" wx:if="{{title}}">{{title}}</view>
+        <view class="model__main-content external-text-class" wx:if="{{content}}">{{content}}</view>
+        <view class="model__main-btns">
+            <view class="model__main-cancel" wx:if="{{hasCancelBtn}}" bindtap="onCancelTap">{{cancelText}}</view>
+            <view class="model__main-ok" bindtap="onOKTap">{{okText}}</view>
+        </view>
+    </view>
+</view>

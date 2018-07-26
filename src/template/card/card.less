@@ -1,0 +1,35 @@
+@import "../../styles/base/variable/color";
+@import "../../styles/base/variable/font";
+@import "../../styles/base/mixin/text";
+.card-cell {
+  display: flex;
+  justify-content: space-between;
+  image {
+    height: 136rpx;
+    width: 136rpx;
+    border-radius: 5px;
+    background: #eee;
+  }
+  &__detail {
+    margin-left: 20rpx;
+    flex: 1;
+  }
+  &__title {
+    font-size: @font-size28;
+    color: @color333;
+    line-height: 38rpx;
+    font-weight: bold;
+    min-height: 72rpx;
+    .ellipsisLn(2)
+  }
+  &__price {
+    margin-top: 16rpx;
+    font-size: 26rpx;
+    color: @color666;
+    text {
+      color: @color-red;
+      line-height: 32rpx;
+      .mixinfont(42, @JDFont);
+    }
+  }
+}

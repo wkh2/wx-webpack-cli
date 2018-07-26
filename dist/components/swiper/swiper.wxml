@@ -1,0 +1,19 @@
+<view class="banner__swiper">
+  <swiper indicator-dots="{{indicatorDots}}"
+          autoplay="{{autoplay}}"
+          interval="{{interval}}"
+          duration="{{duration}}"
+          circular="{{circular}}"
+          indicator-active-color="#ffffff"
+          previous-margin="{{previousMargin}}"
+          next-margin="{{nextMargin}}"
+          bindchange="swiperChange"
+          class="swiper__com"
+  >
+    <block wx:for="{{imgUrls}}">
+      <swiper-item class="swiper__item">
+        <image  src="{{item}}" class="slide-image {{index === current ? 'activeHeght' : ''}}"  />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

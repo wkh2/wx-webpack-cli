@@ -1,0 +1,37 @@
+<view class="treasure-card exteranl-treasure-card" bindtap="onInternal">
+  <!-- 数量 -->
+  <view wx:if="{{item.quantity}}" class="card-quantity">
+    <text>
+      {{item.quantity}}
+    </text>
+  </view>
+  <!-- 商品图片 -->
+  <image wx:if="{{item.venueImageUrl}}" lazy-load="true" mode="aspectFit" class="card-img" src="{{item.venueImageUrl}}"/>
+  <!-- 商品名称 -->
+  <view class="card-name">
+    {{item.productName}}
+  </view>
+
+  <view class="card-footer">
+    <view class="card-footer__left">
+      <!-- 参与活动状态 -->
+      <view class="status" wx:if="{{item.activityStatus}}">
+        {{item.activityStatus}}
+      </view>
+      <!-- 活动时间展示 -->
+      <view class="time">
+        {{item.activityTime}}
+      </view>
+    </view>
+
+    <!-- 跳转外部小程序 -->
+    <navigator target="miniProgram" hover-stop-propagation="true" open-type="navigate" app-id="{{item.appId}}" path="" extra-data="" class="card-footer__right">
+      <!-- 赞助商logo -->
+      <image wx:if="{{item.logoUrl}}" lazy-load="true" mode="aspectFit" class="logo" src="{{item.logoUrl}}"></image>
+      <!-- 赞助商名称 -->
+      <view class="sponsor">
+        {{item.sponsorName}}
+      </view>
+    </navigator>
+  </view>
+</view>

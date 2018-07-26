@@ -1,0 +1,90 @@
+@import '../../styles/index';
+
+.treasure-card {
+  position: relative;
+  padding: 30rpx 20rpx 0;
+  box-sizing: border-box;
+  .mixin-boxshadow();
+}
+
+.treasure-card:active {
+  background: #f8f8f8;
+  opacity: 0.7;
+}
+.card-quantity {
+  position: absolute;
+  top: -4rpx;
+  right: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95rpx;
+  height: 78rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 30rpx;
+}
+
+.card-img {
+  display: block;
+  margin: 0 auto;
+  //margin-top: 30rpx;
+  width: 240rpx;
+  height: 240rpx;
+}
+
+.card-name {
+  margin: 24rpx 0;
+  font-size: 30rpx;
+  color: #302200;
+  line-height: 38rpx;
+
+  min-height: 76rpx;
+  //overflow: hidden;
+  //text-overflow: ellipsis;
+  //white-space: nowrap;
+}
+
+.card-footer {
+  min-height: 82rpx;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24rpx;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    content: '';
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    pointer-events: none;
+    border: 0 solid #e3e5e9;
+    border-top-width: 1px;
+  }
+
+  .card-footer__left,
+  .card-footer__right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card-footer__left {
+    content: #666;
+  }
+  .status {
+    color: #5faf02;
+    margin-right: 20rpx;
+  }
+  .logo {
+    width: 28rpx;
+    height: 28rpx;
+    border-radius: 100%;
+    margin-right: 10rpx;
+  }
+}

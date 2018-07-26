@@ -1,0 +1,91 @@
+{
+  "name": "wx-treasure",
+  "version": "1.0.0",
+  "description": "wx-treasure application for wechat weapp runtime",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch --colors --hide-modules --progress --config build/webpack.dev.conf.js",
+    "start:mock": "cross-env MOCK=true npm run start",
+    "build": "webpack --progress --colors --hide-modules --config build/webpack.prod.conf.js",
+    "lint": "eslint src --ext .js --fix",
+    "format": "prettier-eslint --write *.js"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+http://git.jd.com/xnfed/wx-treasure.git"
+  },
+  "keywords": [
+    "weapp",
+    "weapp",
+    "boilerplate",
+    "wechat",
+    "weixin"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "http://git.jd.com/xnfed/wx-topcloth.git/issues"
+  },
+  "homepage": "http://git.jd.com/xnfed/wx-topcloth.git#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2016": "^6.24.1",
+    "copy-webpack-plugin": "^4.5.1",
+    "cross-env": "^5.1.6",
+    "cssnano": "^3.8.0",
+    "del": "^2.2.2",
+    "file-loader": "^1.1.11",
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "jshint": "^2.9.4",
+    "less": "^3.8.0",
+    "less-loader": "^4.1.0",
+    "postcss": "^5.2.6",
+    "postcss-base64": "^0.4.1",
+    "postcss-import": "^8.2.0",
+    "postcss-lazysprite": "^1.8.0",
+    "postcss-px2rpx": "0.0.4",
+    "precss": "^1.4.0",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "webpack": "3.8.1",
+    "webpack-merge": "^4.1.2",
+    "wxapp-webpack-plugin": "^0.17.2",
+    "wxml-loader": "^0.2.1"
+  },
+  "dependencies": {
+    "babel-eslint": "^8.2.6",
+    "babel-polyfill": "^6.26.0",
+    "eslint": "^5.2.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.1.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "husky": "^1.0.0-rc.13",
+    "image-webpack-loader": "^4.3.1",
+    "lint-staged": "^7.2.0",
+    "prettier": "^1.13.7",
+    "prettier-eslint-cli": "^4.7.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md,less,scss,sass}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}

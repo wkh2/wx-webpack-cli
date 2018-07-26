@@ -1,0 +1,21 @@
+@import "../../styles/base/variable/color";
+@import "../../styles/base/variable/font";
+@import "../../styles/base/variable/blank";
+@import "../../styles/base/mixin/text";
+@import "../../styles/base/mixin/button";
+
+.btn_plain-default{
+  .button(@base-color);
+  margin-right: @bk30;
+  width: 146rpx;
+  height: 60rpx;
+  //line-height: 60rpx;
+  color: @base-color;
+  background-color: #fff;
+}
+
+.btn_plain-default__orange{
+  &:extend(btn_plain-default);
+  border-color: @color-orange!important;
+  color: @color-orange!important;
+}

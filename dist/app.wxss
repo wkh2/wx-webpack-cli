@@ -1,0 +1,61 @@
+/**app.wxss**/
+/*@import "/src/components/toast/toast";*/
+text,
+view {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei";
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+.line-th {
+  text-decoration: line-through;
+}
+/****** template wxss ******/
+.no-more-wrap {
+  width: 100%;
+  height: 100%;
+  background-color: #efeff4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.no-more-icon {
+  width: 229rpx;
+  height: 136rpx;
+}
+.no-more-text {
+  font-size: 28rpx;
+  color: #bfbfbf;
+  line-height: 36rpx;
+  margin-top: 18rpx;
+}
+/****** template wxss end ******/
+.jd-red-bg {
+  background-color: #f23030 !important;
+}
+.jd-red {
+  color: #f23030 !important;
+}
+.jd-red-bd {
+  border-color: #f23030 !important;
+}
+/* toTop wxss */
+.bottom-to-top {
+  position: fixed;
+  bottom: 216rpx;
+  right: 20rpx;
+  width: 78rpx;
+  height: 78rpx;
+  z-index: 300;
+  transform-origin: 0;
+  opacity: 1;
+  transform: scale(1, 1);
+}

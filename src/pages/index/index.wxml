@@ -1,0 +1,8 @@
+<view class="home">
+  <!-- 轮播图 -->
+  <banner-swiper img-urls="{{imgUrls}}"></banner-swiper>
+  <!-- 滚动播报 -->
+  <scroll-message messages="{{messages}}"></scroll-message>
+  <!-- 活动列表 -->
+  <card data="{{product}}"></card>
+</view>

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "banner-swiper": "../../components/swiper/swiper",
+    "scroll-message": "../../components/scroll-message/scroll-message",
+    "card": "../../components/card/card"
+  },
+  "navigationBarTitleText": "每日夺宝",
+  "enablePullDownRefresh": true
+}
